@@ -2,7 +2,6 @@
 .vscode/
 out/
 *.pyc
-.DS_Store
+.DS_Store/
 .idea/
 *.log
-
