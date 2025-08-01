@@ -38,7 +38,7 @@ def create_tx(sender, receiver, amount):
         return (None, "invalid sender UPI id")
     sender = sender_id + "@" + sender_bank
     #
-    # validate reciever id
+    # validate receiver id
     acc_bank = receiver.split("@")
     if len(acc_bank) != 2:
         return (None, "invalid sender UPI id")
@@ -64,7 +64,7 @@ class Tx:
     id: UUID
 
     @staticmethod
-    def new(sender, receiver, amount):
+    def create(sender, receiver, amount):
         if len(sender) == 0:
             return (None, "sender id is empty")
         if len(receiver) == 0:
